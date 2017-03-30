@@ -22,12 +22,12 @@ client.on('message', message => {
 
 
 if(message.content.startsWith(prefix + 'members')) {
-	  if(message.author.id !== "138431969418543104") return;
+	  if(message.author.id !== "YOUR_CLIENT_ID") return;
 	message.channel.sendMessage(message.guild.memberCount);
 };
 
 	if (message.content.startsWith(prefix + 'info')) {
-		  if(message.author.id !== "138431969418543104") return;
+		  if(message.author.id !== "YOUR_CLIENT_ID") return;
         message.channel.sendMessage(`${message.author.username}:
 **Username:** ${message.author.username}#${message.author.discriminator}
 **ID:** ${message.author.id}
