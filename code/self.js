@@ -9,7 +9,7 @@ const moment = require("moment");
 require("moment-duration-format");
 //client.on('',''{});
 client.on('ready',() => {
-	console.log('I\'m Online\nI\'m Online');
+	console.log('I\'m Online');
 });
 
 var prefix = "self."
