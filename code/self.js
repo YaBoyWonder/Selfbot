@@ -52,13 +52,6 @@ if (message.content.startsWith(prefix + 'avatar')) {
 		}});
 	}
 
-
-
-
-
-
-
-
 if(message.content.startsWith(prefix + 'roles')) {
 	  if(message.author.id !== "YOUR_CLIENT_ID") return;
 	message.reply(message.guild.roles.map(r => r.name.replace('@everyone', 'Here :arrow_down:')));
