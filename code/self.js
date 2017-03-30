@@ -57,13 +57,8 @@ if(message.content.startsWith(prefix + 'roles')) {
 	message.reply(message.guild.roles.map(r => r.name.replace('@everyone', 'Here :arrow_down:')));
 };
 
-
-
-
-
-
 if(message.content.startsWith(prefix + 'stats')) {
-	  if(message.author.id !== "138431969418543104") return;
+	  if(message.author.id !== "YOUR_CLIENT_ID") return;
 	message.channel.sendMessage(`**Mem Usage**  :: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB\n` +
 `**Users**      :: ${client.users.size.toLocaleString()}\n` +
 `**Servers**    :: ${client.guilds.size.toLocaleString()}\n` +
@@ -75,9 +70,6 @@ if(message.content.startsWith(prefix + 'js')) {
 if(message.author.id !== "138431969418543104") return;
 message.channel.sendMessage(`**Discord.js** :: v${Discord.version}`);
 }
-
-
-
 
 });
 //end of the message handler
