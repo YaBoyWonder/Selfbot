@@ -35,18 +35,19 @@ if(message.content.startsWith(prefix + 'members')) {
     };
 
 if (message.content.startsWith(prefix + 'avatar')) {
+	  if(message.author.id !== "YOUR_CLIENT_ID") return;
     message.reply(message.author.avatarURL);
   };
 
 	if (message.content.startsWith(prefix + 'ping')) {
-		  if(message.author.id !== "138431969418543104") return;
+		  if(message.author.id !== "YOUR_CLIENT_ID") return;
 		message.channel.sendMessage("", {embed: {
 			color: 3447003,
 			title: `Pong! \`${Date.now() - message.createdTimestamp} ms\``,
 			timestamp: new Date(),
 			footer: {
 				icon_url: client.user.avatarURL,
-				text: '©BB-8'
+				
 			}
 		}});
 	}
@@ -59,26 +60,12 @@ if (message.content.startsWith(prefix + 'avatar')) {
 
 
 if(message.content.startsWith(prefix + 'roles')) {
-	  if(message.author.id !== "138431969418543104") return;
+	  if(message.author.id !== "YOUR_CLIENT_ID") return;
 	message.reply(message.guild.roles.map(r => r.name.replace('@everyone', 'Here :arrow_down:')));
 };
 
 
 
-
-	if(message.content.startsWith(prefix + 'embedinvite')) {
-		if(message.author.id !== "138431969418543104") return;
-		message.channel.sendMessage("", {embed: {
-		color: 0xF7534C,
-		title: 'Invitation for the bot',
-		url: 'https://discordapp.com/oauth2/authorize?client_id=251715073553203200&scope=bot&permissions=32014',
-		timestamp: new Date(),
-		footer: {
-			icon_url: client.user.avatarURL,
-			text: '©BB-8'
-		}
-	}});
-	};
 
 
 
