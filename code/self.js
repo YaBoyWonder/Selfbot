@@ -1,5 +1,4 @@
 "use strict";
-
 const Discord = require('discord.js');
 const settings = require('./settings.json');
 const ddiff = require('return-deep-diff');
@@ -26,8 +25,8 @@ if(message.content.startsWith(prefix + 'members')) {
 	message.channel.sendMessage(message.guild.memberCount);
 };
 
-	if (message.content.startsWith(prefix + 'info')) {
-		  if(message.author.id !== "YOUR_CLIENT_ID") return;
+if (message.content.startsWith(prefix + 'info')) {
+  if(message.author.id !== "YOUR_CLIENT_ID") return;
         message.channel.sendMessage(`${message.author.username}:
 **Username:** ${message.author.username}#${message.author.discriminator}
 **ID:** ${message.author.id}
@@ -35,8 +34,8 @@ if(message.content.startsWith(prefix + 'members')) {
     };
 
 if (message.content.startsWith(prefix + 'avatar')) {
-	  if(message.author.id !== "YOUR_CLIENT_ID") return;
-    message.reply(message.author.avatarURL);
+   if(message.author.id !== "YOUR_CLIENT_ID") return;
+      message.reply(message.author.avatarURL);
   };
 
 	if (message.content.startsWith(prefix + 'ping')) {
@@ -67,12 +66,12 @@ if(message.content.startsWith(prefix + 'stats')) {
 };
 
 if(message.content.startsWith(prefix + 'js')) {
-if(message.author.id !== "138431969418543104") return;
+if(message.author.id !== "YOUR_CLIENT_ID") return;
 message.channel.sendMessage(`**Discord.js** :: v${Discord.version}`);
 }
 
 });
-//end of the message handler
+
 function clean(text) {
   if (typeof(text) === "string")
     return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
