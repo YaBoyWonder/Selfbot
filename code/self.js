@@ -59,10 +59,10 @@ if(message.content.startsWith(prefix + 'roles')) {
 if(message.content.startsWith(prefix + 'stats')) {
 	  if(message.author.id !== "YOUR_CLIENT_ID") return;
 	message.channel.sendMessage(`**Mem Usage**  :: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB\n` +
-`**Users**      :: ${client.users.size.toLocaleString()}\n` +
-`**Servers**    :: ${client.guilds.size.toLocaleString()}\n` +
-`**Channels**   :: ${client.channels.size.toLocaleString()}\n` +
-`**Discord.js** :: v${Discord.version}`);
+`**❯Users**      :: ${client.users.size.toLocaleString()}\n` +
+`**❯Servers**    :: ${client.guilds.size.toLocaleString()}\n` +
+`**❯Channels**   :: ${client.channels.size.toLocaleString()}\n` +
+`**❯Discord.js** :: v${Discord.version}`);
 };
 
 if(message.content.startsWith(prefix + 'js')) {
